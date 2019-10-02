@@ -65,6 +65,7 @@ void destroy_thread_data(struct s_thread_data *data) {
  * Return true if it matches, false otherwise
  */
 bool check(struct s_thread_data *data, const char *secret, size_t secret_len) {
+    printf("%s\n", secret);
     // If the secret was found by another thread, stop this thread
     if (g_found_secret != NULL) {
         destroy_thread_data(data);
