@@ -152,13 +152,13 @@ char *brute_sequential(struct s_thread_data *data)
 
 void usage(const char *cmd) {
 	printf("%s <token> [alphabet] [max_len]\n"
-				   "Defaults: max_len=6, "
-				   "alphabet=eariotnslcudpmhgbfywkvxzjqEARIOTNSLCUDPMHGBFYWKVXZJQ0123456789", cmd);
+				   "Defaults: max_len=10, "
+				   "alphabet={CHECK_SOURCE}", cmd);
 }
 
 int main(int argc, char **argv) {
-	size_t max_len = 6;
-	g_alphabet = "eariotnslcudpmhgbfywkvxzjqEARIOTNSLCUDPMHGBFYWKVXZJQ0123456789";
+	size_t max_len = 10;
+	g_alphabet = "eariotnslcudpmhgbfywkvxzjqEARIOTNSLCUDPMHGBFYWKVXZJQ0123456789!#$%&'()*+,-./:;<=>?@[\\\"]^_`{|}~ ";
 
 	if (argc < 2) {
 		usage(argv[0]);
